@@ -14,6 +14,12 @@ ul li:last-child {
   color: pink;
 }
 
+.container {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+}
+
 .purple-circle {
   width: 50px;
   height: 50px;
@@ -27,16 +33,29 @@ ul li:last-child {
   margin-top: 30px;
 }
 
+.dropdown button {
+  background-color: white;
+  border: 1px solid seagreen;
+  border-radius: 5px;
+  cursor: pointer;
+  color: seagreen;
+  padding: 10px;
+}
+
 .dropdown-menu {
   position: absolute;
-  z-index: 10;
-  border: 1px solid black;
-  opacity: 0;
+  border-radius: 5px;
+  background-color: white;
+  padding: 10px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+  max-height: 0;
   visibility: hidden;
-  transition: opacity 300ms 0ms ease-in-out;
+  overflow: hidden;
+  transition: all 300ms 0ms ease-in-out;
 }
 
 .dropdown-menu ul {
+  margin: 0;
   display: flex;
   list-style: none;
   flex-direction: column;
@@ -57,7 +76,6 @@ ul li:last-child {
 }
 
 .dropdown-menu.show {
-  opacity: 1;
+  max-height: 500px;
   visibility: visible;
-  transition: opacity 300ms 0ms ease-in-out;
 }

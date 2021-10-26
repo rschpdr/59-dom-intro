@@ -26,7 +26,7 @@ btn.addEventListener("click", () => {
 const textInput = document.getElementById("textInput");
 const charCount = document.getElementById("charCount");
 
-// O evento keypress é disparado toda vez que o usuário aperta qualquer tecla do teclado
+// O evento keyup é disparado toda vez que o usuário aperta e depois solta qualquer tecla do teclado
 textInput.addEventListener("keyup", () => {
   // Para acessar o conteúdo digitado pelo usuário em um input, acessamos o atributo 'value'
 

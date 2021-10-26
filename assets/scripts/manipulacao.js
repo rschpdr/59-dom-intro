@@ -52,17 +52,27 @@ const intervalId = setInterval(() => {
   }
 }, 100);
 
-// Aumentar o círculo a cada 1 segundo
+// Aumentar o círculo a cada 1 segundo até um tamanho, depois diminui
 
 const circle = document.querySelector(".purple-circle");
 
-let sizeCount = 1.1;
+let sizeCount = 110;
+let currentAction = "grow";
 
 const intervalId2 = setInterval(() => {
-  circle.style.transform = `scale(${sizeCount})`;
-  sizeCount += 0.1;
+  circle.style.transform = `scale(${sizeCount / 100})`;
 
-  if (sizeCount > 2) {
-    clearInterval(intervalId2);
+  if (currentAction === "grow") {
+    sizeCount += 10;
+  } else if (currentAction === "shrink") {
+    sizeCount -= 10;
+  }
+
+  if (sizeCount > 200) {
+    currentAction = "shrink";
+  }
+
+  if (sizeCount < 110) {
+    currentAction = "grow";
   }
 }, 1000);
