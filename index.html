@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" type="text/css" href="./assets/styles/style.css" />
+
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+      <nav></nav>
+    </header>
+
+    <main>
+      <h1 id="mainTitle" class="red-text">Ola mundo</h1>
+      <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias
+        dolorum excepturi earum quam ratione at, neque voluptate ipsa, tenetur
+        pariatur ea doloribus, itaque explicabo animi. Assumenda inventore atque
+        repellat dolores!
+      </p>
+
+      <p class="red-text">Outro parágrafo</p>
+
+      <ul>
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+        <li>Item 4</li>
+      </ul>
+
+      <ul>
+        <li>Item 5</li>
+        <li>Item 6</li>
+        <li>Item 7</li>
+        <li>Item 8</li>
+      </ul>
+
+      <p id="secondLorem"></p>
+
+      <div class="purple-circle"></div>
+
+      <div class="dropdown" id="dropdownMenu">
+        <button id="dropdownMenuBtn">Expandir</button>
+
+        <div class="dropdown-menu">
+          <ul>
+            <li><a>Ação 1</a></li>
+            <li><a>Ação 2</a></li>
+            <li><a>Ação 3</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <h3>Contador de caracteres</h3>
+      <div>
+        <textarea id="textInput"> </textarea>
+        <span id="charCount">0</span>
+      </div>
+    </main>
+
+    <footer>Copyright &copy;</footer>
+
+    <!-- Importar os nossos scripts do Javascript no HTML -->
+    <!-- Por questões de usabilidade, sempre colocamos as tags <script> ao final do arquivo -->
+
+    <!-- Não é muito recomendado escrever javascript diretamente no HTML para não violar o single responsibility principle -->
+    <script>
+      console.log("executando diretamente do arquivo HTML");
+    </script>
+    <!-- Importar um arquivo js externo é a boa prática -->
+    <script type="text/javascript" src="./assets/scripts/seletores.js"></script>
+    <script
+      type="text/javascript"
+      src="./assets/scripts/manipulacao.js"
+    ></script>
+    <script type="text/javascript" src="./assets/scripts/eventos.js"></script>
+  </body>
+</html>
